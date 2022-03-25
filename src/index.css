@@ -1,13 +1,191 @@
-body {
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #282c34;
+  color: white;
+  font: 2.4rem 'Mulish', sans-serif;
+  margin: 20px;
+
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 34px;
+  height: 12rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 12rem;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-info{
+  margin: 2rem auto;
+  width: 100%;
+  text-align: center;
+}
+
+.board-row{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.game-info {
+  width: 36rem;
+}
+
+.game-info button{
+  width: 95%;
+  text-align: left;
+  height: 3.2rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+.game-info button:hover{
+  background-color: rgb(205, 216, 216);
+}
+
+@media (min-width:600px){
+  ol{
+    margin-top: 0;
+  }
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 34px;
+    height: 14.5rem;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 14.5rem;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    width: 100%;
+  }
+  
+  .header-info{
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+  }
+  .game-secondary{
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .board-row{
+    width: 100%;
+    display: flex;
+  }
+  .game-board{
+    display: inline-block;
+  }
+  .game-info {
+    width: 30%;
+    display: inline-block;
+    margin-left: 2rem;
+
+  }
+  
+  .game-info button{
+    width: 98%;
+    height: 6rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width:900px){
+  ol{
+    margin-top: 1.5rem;
+  }
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 34px;
+    height: 16rem;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 16rem;
+  }
+  
+  .header-info{
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .game-info {
+    width: 25%;
+    display: inline-block;
+    margin-left: 2rem;
+
+  }
+  
+  .game-info button{
+    width: 98%;
+    height: 4rem;
+    font-size: 1.7rem;
+  }
 }
